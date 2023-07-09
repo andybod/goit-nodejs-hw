@@ -1,11 +1,9 @@
-// contacts.js
 import fs from "fs/promises";
 import path from "path";
 import { nanoid } from "nanoid";
 
 const contactsPath = path.resolve("bd", "contacts.json");
 
-// TODO: задокументувати кожну функцію
 export const listContacts = async () => {
   const data = await fs.readFile(contactsPath);
   return JSON.parse(data);
